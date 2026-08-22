@@ -1,0 +1,13 @@
+table_name,rows_read,rows_after_normalisation,rows_rejected,rejection_reason,rows_final,critical_rejected
+companies,92,92,0,bad ticker,92,0
+profitandloss,1276,1260,16,"3 unparseable year, 13 duplicate PK",1161,99
+balancesheet,1312,1220,92,"5 unparseable year, 87 duplicate PK",1140,80
+cashflow,1187,1152,35,"0 unparseable year, 35 duplicate PK",1056,96
+sectors,92,92,0,,92,0
+stock_prices,5520,5520,0,,5520,0
+market_cap,552,552,0,,552,0
+financial_ratios,1184,1184,0,,1160,24
+peer_groups,56,56,0,,56,0
+analysis,20,20,0,,16,4
+documents,1585,1585,0,,1457,128
+prosandcons,16,16,0,,14,2
