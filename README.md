@@ -54,20 +54,20 @@ that a generic loader would have silently gotten wrong:
 
 ## Results after cleaning
 
-| Table | Rows loaded | Rows rejected | Reason |
-|---|---|---|---|
-| companies | 92 | 0 | — |
-| profitandloss | 1,161 | 115 | 99 orphan FK, 13 dup PK, 3 bad year |
-| balancesheet | 1,140 | 172 | 80 orphan FK, 87 dup PK, 5 bad year |
-| cashflow | 1,056 | 131 | 96 orphan FK, 35 dup PK |
-| sectors | 92 | 0 | — |
-| stock_prices | 5,520 | 0 | — |
-| market_cap | 552 | 0 | — |
-| financial_ratios | 1,160 | 24 | orphan FK |
-| peer_groups | 56 | 0 | — |
-| analysis | 16 | 4 | orphan FK |
-| documents | 1,457 | 128 | orphan FK |
-| prosandcons | 14 | 2 | orphan FK |
+| Table            | Rows loaded | Rows rejected | Reason                              |
+|------------------|-------------|---------------|-------------------------------------|
+| companies        | 92          | 0             | —                                   |
+| profitandloss    | 1,161       | 115           | 99 orphan FK, 13 dup PK, 3 bad year |
+| balancesheet     | 1,140       | 172           | 80 orphan FK, 87 dup PK, 5 bad year |
+| cashflow         | 1,056       | 131           | 96 orphan FK, 35 dup PK             |
+| sectors          | 92          | 0             | —                                   |
+| stock_prices     | 5,520       | 0             | —                                   |
+| market_cap       | 552         | 0             | —                                   |
+| financial_ratios | 1,160       | 24            | orphan FK                           |
+| peer_groups      | 56          | 0             | —                                   |
+| analysis         | 16          | 4             | orphan FK                           |
+| documents        | 1,457       | 128           | orphan FK                           |
+| prosandcons      | 14          | 2             | orphan FK                           |
 
 ## Validation Summary
 
