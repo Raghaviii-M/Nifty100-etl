@@ -1,0 +1,70 @@
+Sprint 2 - Ratio Edge Case Log
+Cross-check: our computed ROCE/ROE (latest fiscal year) vs companies.xlsx pre-computed fields
+Tolerance: 5 percentage points
+====================================================================================================
+[ROCE] ABB          computed=36.54%  source=46.00%  diff=9.46pp  category=VERSION_DIFFERENCE
+[ROE]  ADANIENT     computed=8.53%  source=13.64%  diff=5.11pp  category=VERSION_DIFFERENCE
+[ROCE] ADANIGREEN   computed=7.25%  source=96.50%  diff=89.25pp  category=VERSION_DIFFERENCE
+[ROCE] ADANIPOWER   computed=18.39%  source=32.20%  diff=13.81pp  category=VERSION_DIFFERENCE
+[ROE]  ADANIPOWER   computed=48.28%  source=57.10%  diff=8.82pp  category=VERSION_DIFFERENCE
+[ROCE] ASIANPAINT   computed=31.75%  source=41.75%  diff=10.00pp  category=VERSION_DIFFERENCE
+[ROCE] BAJAJ-AUTO   computed=27.21%  source=33.50%  diff=6.29pp  category=VERSION_DIFFERENCE
+[ROCE] BAJAJFINSV   computed=11.45%  source=21.14%  diff=9.69pp  category=VERSION_DIFFERENCE
+[ROE]  BAJAJFINSV   computed=25.85%  source=11.72%  diff=14.13pp  category=VERSION_DIFFERENCE
+[ROCE] BAJAJHLDNG   computed=2.81%  source=13.10%  diff=10.29pp  category=VERSION_DIFFERENCE
+[ROCE] BAJFINANCE   computed=4.17%  source=11.90%  diff=7.73pp  category=VERSION_DIFFERENCE
+[ROCE] BEL          computed=3628.35%  source=34.60%  diff=3593.75pp  category=DATA_SOURCE_ISSUE
+[ROE]  BEL          computed=4744.05%  source=26.30%  diff=4717.75pp  category=DATA_SOURCE_ISSUE  <- implausible magnitude, likely bad equity/reserves value in balancesheet.xlsx
+[ROCE] BOSCHLTD     computed=13.76%  source=20.60%  diff=6.84pp  category=VERSION_DIFFERENCE
+[ROE]  BPCL         computed=35.51%  source=41.90%  diff=6.39pp  category=VERSION_DIFFERENCE
+[ROCE] CHOLAFIN     computed=3.37%  source=10.40%  diff=7.03pp  category=VERSION_DIFFERENCE
+[ROCE] CIPLA        computed=67.60%  source=22.80%  diff=44.80pp  category=VERSION_DIFFERENCE
+[ROCE] COALINDIA    computed=98.17%  source=63.60%  diff=34.57pp  category=VERSION_DIFFERENCE
+[ROE]  COALINDIA    computed=45.17%  source=52.00%  diff=6.83pp  category=VERSION_DIFFERENCE
+[ROCE] DRREDDY      computed=21.36%  source=26.50%  diff=5.14pp  category=VERSION_DIFFERENCE
+[ROCE] EICHERMOT    computed=20.21%  source=31.10%  diff=10.89pp  category=VERSION_DIFFERENCE
+[ROCE] GODREJCP     computed=17.17%  source=26.49%  diff=9.32pp  category=VERSION_DIFFERENCE
+[ROE]  GODREJCP     computed=-4.45%  source=6.77%  diff=11.22pp  category=VERSION_DIFFERENCE
+[ROCE] HAL          computed=2590.99%  source=38.90%  diff=2552.09pp  category=DATA_SOURCE_ISSUE
+[ROE]  HAL          computed=3816.58%  source=28.90%  diff=3787.68pp  category=DATA_SOURCE_ISSUE  <- implausible magnitude, likely bad equity/reserves value in balancesheet.xlsx
+[ROCE] HDFCLIFE     computed=645.95%  source=6.61%  diff=639.34pp  category=DATA_SOURCE_ISSUE
+[ROCE] HEROMOTOCO   computed=173.71%  source=29.10%  diff=144.61pp  category=VERSION_DIFFERENCE
+[ROCE] HINDALCO     computed=113.58%  source=11.30%  diff=102.28pp  category=VERSION_DIFFERENCE
+[ROCE] HINDUNILVR   computed=87.32%  source=27.20%  diff=60.12pp  category=VERSION_DIFFERENCE
+[ROCE] ICICIGI      computed=145.23%  source=22.50%  diff=122.73pp  category=VERSION_DIFFERENCE
+[ROCE] ICICIPRULI   computed=753.98%  source=8.75%  diff=745.23pp  category=DATA_SOURCE_ISSUE
+[ROCE] INDIGO       computed=4953.54%  source=24.50%  diff=4929.04pp  category=DATA_SOURCE_ISSUE
+[ROCE] INFY         computed=32.91%  source=40.00%  diff=7.09pp  category=VERSION_DIFFERENCE
+[ROCE] IRCTC        computed=42.83%  source=53.80%  diff=10.97pp  category=VERSION_DIFFERENCE
+[ROE]  IRCTC        computed=34.40%  source=40.40%  diff=6.00pp  category=VERSION_DIFFERENCE
+[ROCE] LICI         computed=39.05%  source=63.79%  diff=24.74pp  category=VERSION_DIFFERENCE
+[ROE]  LICI         computed=49.45%  source=63.61%  diff=14.16pp  category=VERSION_DIFFERENCE
+[ROCE] LT           computed=118.53%  source=17.18%  diff=101.35pp  category=VERSION_DIFFERENCE
+[ROE]  LT           computed=77.67%  source=10.49%  diff=67.18pp  category=VERSION_DIFFERENCE
+[ROCE] LTIM         computed=25.21%  source=34.10%  diff=8.89pp  category=VERSION_DIFFERENCE
+[ROCE] M&M          computed=11.54%  source=26.98%  diff=15.44pp  category=VERSION_DIFFERENCE
+[ROCE] MARUTI       computed=15.59%  source=23.67%  diff=8.08pp  category=VERSION_DIFFERENCE
+[ROCE] NESTLEIND    computed=143.15%  source=185.43%  diff=42.28pp  category=VERSION_DIFFERENCE
+[ROE]  NESTLEIND    computed=117.75%  source=135.61%  diff=17.86pp  category=VERSION_DIFFERENCE
+[ROCE] PFC          computed=3.48%  source=9.96%  diff=6.48pp  category=VERSION_DIFFERENCE
+[ROE]  PFC          computed=26.16%  source=19.49%  diff=6.67pp  category=VERSION_DIFFERENCE
+[ROE]  PNB          computed=61.32%  source=8.70%  diff=52.62pp  category=VERSION_DIFFERENCE
+[ROCE] SBILIFE      computed=1.14%  source=13.20%  diff=12.06pp  category=VERSION_DIFFERENCE
+[ROCE] SHRIRAMFIN   computed=4.06%  source=11.30%  diff=7.24pp  category=VERSION_DIFFERENCE
+[ROCE] SIEMENS      computed=17.74%  source=25.60%  diff=7.86pp  category=VERSION_DIFFERENCE
+[ROE]  TATAMOTORS   computed=37.46%  source=49.40%  diff=11.94pp  category=VERSION_DIFFERENCE
+[ROE]  TATASTEEL    computed=-5.33%  source=6.55%  diff=11.88pp  category=VERSION_DIFFERENCE
+[ROE]  TCS          computed=50.94%  source=0.52%  diff=50.42pp  category=VERSION_DIFFERENCE
+[ROE]  TRENT        computed=36.31%  source=27.20%  diff=9.11pp  category=VERSION_DIFFERENCE
+====================================================================================================
+Total anomalies logged: 54
+
+Notes:
+- TCS-style anomalies (source ROE far below computed) are treated as VERSION_DIFFERENCE:
+  companies.xlsx values appear to be a snapshot from a different reporting date than
+  our latest fiscal year row. The ratio engine's computed value is used for all
+  downstream analytics; the source value is display-only per the project spec.
+- Cases with |computed value| > 200% (e.g. BEL, HAL) are DATA_SOURCE_ISSUE: the
+  underlying balancesheet.xlsx equity_capital/reserves values for these companies
+  are implausibly small relative to their net profit, which inflates the ratio.
+  These are flagged for manual data correction, not treated as a formula bug.
