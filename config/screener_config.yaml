@@ -1,0 +1,87 @@
+# screener_config.yaml — Sprint 3
+# Analyst-editable thresholds. No code changes needed to tune a preset.
+
+presets:
+  quality_compounder:
+    label: "Quality Compounder"
+    filters:
+      return_on_equity_pct: {min: 15}
+      debt_to_equity: {max: 1.0}
+      free_cash_flow_cr: {min: 0}
+      revenue_cagr_5yr: {min: 10}
+
+  value_pick:
+    label: "Value Pick"
+    filters:
+      pe_ratio: {max: 30}   # widened from 20x — 20x/3x combo returned only 2/92 companies on this dataset
+      pb_ratio: {max: 5.0}  # widened from 3.0x — see note below
+      debt_to_equity: {max: 2.0}
+      dividend_yield_pct: {min: 1}
+    note: >
+      Original thresholds (P/E<20, P/B<3) returned only 2 companies out of 92 —
+      too narrow to be a useful screen. Widened to P/E<30, P/B<5 after checking
+      the threshold sensitivity (see SPRINT3_NOTES.md); this dataset's large-cap
+      valuations rarely fall below 3x book value, so a strict 3x cutoff was
+      effectively unusable on this universe, not a sign the tickers don't exist.
+
+  growth_accelerator:
+    label: "Growth Accelerator"
+    filters:
+      pat_cagr_5yr: {min: 20}
+      revenue_cagr_5yr: {min: 15}
+      debt_to_equity: {max: 2.0}
+
+  dividend_champion:
+    label: "Dividend Champion"
+    filters:
+      dividend_yield_pct: {min: 2}
+      dividend_payout_ratio_pct: {max: 80}
+      free_cash_flow_cr: {min: 0}
+
+  debt_free_blue_chip:
+    label: "Debt-Free Blue Chip"
+    filters:
+      debt_to_equity: {max: 0.05}   # "functionally debt-free" — see note below
+      return_on_equity_pct: {min: 12}
+      sales: {min: 5000}
+    skip_financials_for_de: false   # deliberately NOT exempted — the whole point
+                                     # of this screen is genuine near-zero leverage,
+                                     # so a highly-levered bank should not pass just
+                                     # because banks are structurally leveraged
+    note: >
+      Strict D/E==0 returned only 2 companies. Widened to D/E<=0.05 ("functionally
+      debt-free") for a more usable screen. Unlike the other presets, the
+      Financials-sector D/E exemption is turned OFF here — exempting banks would
+      let highly-leveraged financial companies pass a screen whose entire premise
+      is near-zero leverage, which contradicts the preset's own definition.
+
+  turnaround_watch:
+    label: "Turnaround Watch"
+    filters:
+      revenue_cagr_3yr: {min: 10}
+      free_cash_flow_cr: {min: 0}
+      # D/E declining year-over-year is handled as custom logic, not a simple threshold
+
+# All 15 filterable metrics available for custom screens (Day 15)
+filterable_metrics:
+  - return_on_equity_pct       # ROE min
+  - debt_to_equity              # D/E max (skipped for Financials sector)
+  - free_cash_flow_cr           # FCF min
+  - revenue_cagr_5yr            # Revenue CAGR 5yr min
+  - pat_cagr_5yr                 # PAT CAGR 5yr min
+  - operating_profit_margin_pct # OPM min
+  - pe_ratio                    # P/E max
+  - pb_ratio                    # P/B max
+  - dividend_yield_pct           # Dividend Yield min
+  - interest_coverage           # ICR min (Debt Free treated as infinity)
+  - market_cap_crore             # Market Cap min
+  - net_profit                  # Net Profit min
+  - eps_cagr_5yr                 # EPS CAGR min
+  - asset_turnover               # Asset Turnover min
+  - sales                       # Sales min
+
+composite_score_weights:
+  profitability: 0.35   # ROE 15% + ROCE 10% + NPM 10%
+  cash_quality: 0.30    # FCF CAGR 15% + CFO/PAT ratio 10% + FCF positive flag 5%
+  growth: 0.20          # Revenue CAGR 10% + PAT CAGR 10%
+  leverage: 0.15        # D/E score 10% + ICR score 5%
