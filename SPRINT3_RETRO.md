@@ -2,13 +2,14 @@
 
 ## Exit criteria — all met
 
-| Criterion | Result |
-|---|---|
-| 6 preset screeners each return 5-50 companies | ✅ Quality Compounder 22, Value Pick 7, Growth Accelerator 20, Dividend Champion 31, Debt-Free Blue Chip 16, Turnaround Watch 32 |
-| peer_comparison.xlsx has exactly 11 sheets | ✅ 11 sheets, one per peer group |
-| Peer percentile ranks correct (IT Services, FMCG spot-check) | ✅ Highest ROE (TCS, NESTLEIND) has highest ROE percentile in both groups |
-| All 14 DQ rule unit tests pass | ✅ 14/14 passing |
-| Sprint review sign-off | Pending team lead demo |
+| Criterion                                                    | Result                                                                        |
+|--------------------------------------------------------------|-------------------------------------------------------------------------------|
+| 6 preset screeners each return 5-50 companies                | Quality Compounder 22, Value Pick 7, Growth Accelerator 20, Dividend Champion
+                                                                 31, Debt-Free Blue Chip 16, Turnaround Watch 32                               |
+| peer_comparison.xlsx has exactly 11 sheets                   | 11 sheets, one per peer group                                                 |
+| Peer percentile ranks correct (IT Services, FMCG spot-check) | Highest ROE (TCS, NESTLEIND) has highest ROE percentile in both groups        |
+| All 14 DQ rule unit tests pass                               | 14/14 passing                                                                 |
+| Sprint review sign-off                                       | Pending team lead demo                                                        |
 
 ## What went well
 - The filter engine and composite score worked correctly on the first real
