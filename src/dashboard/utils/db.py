@@ -9,6 +9,7 @@ from pathlib import Path
 import pandas as pd
 import streamlit as st
 
+
 DB_PATH = Path(__file__).resolve().parents[3] / "db" / "nifty100.db"
 
 
